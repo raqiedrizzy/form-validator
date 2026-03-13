@@ -477,3 +477,12 @@
 [2026-03-13 17:28:45][INFO] Form process: 10098.7s - FAILED
 [2026-03-13 17:28:45][WARN] ⚠ Form submission failed
 [2026-03-13 17:28:45][INFO] Cooldown: 37 min. Next run at 18:06
+[2026-03-13 18:04:19][INFO] Attempt #12 starting...
+[2026-03-13 18:04:19][INFO] Selected Form 2 (alternating from Form 1)
+[2026-03-13 18:04:19][INFO] Auto-refreshing proxies (pool size: 1, stale: True)
+[2026-03-13 18:04:19][INFO] ProxyManager: refreshing (workers=30, goal=50)...
+[2026-03-13 18:04:19][INFO] Proxy source: 40 candidates <- https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
+[2026-03-13 18:04:19][INFO] Proxy source: 251 candidates <- https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list
+[2026-03-13 18:04:19][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
+[2026-03-13 18:04:19][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
+[2026-03-13 18:04:19][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
