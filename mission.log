@@ -1,89 +1,25 @@
-[2026-03-13 15:21:02][WARN] ⚠ No options or text fields found for: SEHEMU D
-[2026-03-13 15:21:02][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (2 items)
-[2026-03-13 15:21:08][WARN] ⚠ Error processing question 95: Message: element not interactable
+[2026-03-13 16:21:33][WARN] ⚠ No options or text fields found for: SEHEMU YA C
+[2026-03-13 16:21:33][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (2 items)
+[2026-03-13 16:21:39][WARN] ⚠ Error processing question 76: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:13][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:21:18][WARN] ⚠ Error processing question 96: Message: element not interactable
+[2026-03-13 16:21:44][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
+[2026-03-13 16:21:49][WARN] ⚠ Error processing question 77: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:23][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:21:29][WARN] ⚠ Error processing question 97: Message: element not interactable
+[2026-03-13 16:21:54][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
+[2026-03-13 16:21:59][WARN] ⚠ Error processing question 78: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:29][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (2 items)
-[2026-03-13 15:21:34][WARN] ⚠ Error processing question 98: Message: element not interactable
+[2026-03-13 16:21:59][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (2 items)
+[2026-03-13 16:22:05][WARN] ⚠ Error processing question 79: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:39][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:21:45][WARN] ⚠ Error processing question 99: Message: element not interactable
+[2026-03-13 16:22:10][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
+[2026-03-13 16:22:15][WARN] ⚠ Error processing question 80: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:50][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:21:55][WARN] ⚠ Error processing question 100: Message: element not interactable
+[2026-03-13 16:22:20][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
+[2026-03-13 16:22:26][WARN] ⚠ Error processing question 81: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:21:55][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (5 items)
-[2026-03-13 15:22:01][WARN] ⚠ Error processing question 101: Message: element not interactable
+[2026-03-13 16:30:22][WARN] ⚠ Error processing question 4: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:22:04][INFO] Attempt #7 starting...
-[2026-03-13 15:22:04][INFO] Selected Form 2 (alternating from Form 1)
-[2026-03-13 15:22:04][INFO] Auto-refreshing proxies (pool size: 1, stale: True)
-[2026-03-13 15:22:04][INFO] ProxyManager: refreshing (workers=30, goal=50)...
-[2026-03-13 15:22:04][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
-[2026-03-13 15:22:04][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
-[2026-03-13 15:22:04][INFO] Proxy source: 251 candidates <- https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list
-[2026-03-13 15:22:04][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
-[2026-03-13 15:22:04][INFO] Proxy source: 40 candidates <- https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
-[2026-03-13 15:22:06][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:22:11][WARN] ⚠ Error processing question 102: Message: element not interactable
+[2026-03-13 16:30:27][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
+[2026-03-13 16:30:32][WARN] ⚠ Error processing question 5: Message: element not interactable
   (Session info: chrome=14
-[2026-03-13 15:22:16][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:22:22][WARN] ⚠ Error processing question 103: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:22:27][INFO] Proxy verified: 103.189.249.145:1111
-[2026-03-13 15:22:27][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:22:32][WARN] ⚠ Error processing question 104: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:22:37][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:22:38][INFO] Proxy verified: 128.199.202.122:8080
-[2026-03-13 15:22:38][INFO] ProxyManager: 2 clean proxies ready.
-[2026-03-13 15:22:38][INFO] Selected eligible proxy: 103.189.249.145:1111 for Form 2
-[2026-03-13 15:22:38][INFO] Using proxy: 103.189.249.145:1111 for Form 2
-[2026-03-13 15:22:38][INFO] Navigating to Form 2: https://docs.google.com/forms/d/e/1FAIpQLSd_a_DS8qoevwm-anVAn5Iv2J6uKDc6N5RjomS0h21Gd3Dmag/viewform?usp=dialog
-[2026-03-13 15:22:43][WARN] ⚠ Error processing question 105: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:22:48][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:22:53][WARN] ⚠ Error processing question 106: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:22:53][INFO] Retrying 106 unanswered questions...
-[2026-03-13 15:22:53][INFO] Final verification using selector: div[role='listitem'] (106 items)
-[2026-03-13 15:22:59][INFO] Processing page 1...
-[2026-03-13 15:22:59][INFO] Current URL: https://docs.google.com/forms/d/e/1FAIpQLSd_a_DS8qoevwm-anVAn5Iv2J6uKDc6N5RjomS0h21Gd3Dmag/viewform?usp=dialog
-[2026-03-13 15:22:59][INFO] Page source length: 188362 characters
-[2026-03-13 15:23:49][WARN] ⚠ Not all questions answered. Retrying page...
-[2026-03-13 15:23:51][INFO] Processing page 3...
-[2026-03-13 15:23:51][INFO] Current URL: https://docs.google.com/forms/d/e/1FAIpQLSfNd-UEvuk2LyHMsTjflIo-wXjk6DVkD-wj1DPNc8rAsSMHBg/viewform
-[2026-03-13 15:23:51][INFO] Page source length: 201072 characters
-[2026-03-13 15:23:51][INFO] Form elements found using selector: div[role='listitem'] (106 items)
-[2026-03-13 15:23:51][INFO] Questions found using selector: div[role='listitem'] (106 items)
-[2026-03-13 15:23:51][INFO] Found 106 questions on page 3
-[2026-03-13 15:24:15][WARN] No standard form elements found, trying fallback detection...
-[2026-03-13 15:24:35][INFO] Fallback found 4 elements with selector: span
-[2026-03-13 15:24:52][WARN] ⚠ No options or text fields found for: SEHEMU A
-[2026-03-13 15:24:52][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (5 items)
-[2026-03-13 15:24:57][WARN] ⚠ Error processing question 2: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:02][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:25:07][WARN] ⚠ Error processing question 3: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:13][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:25:18][WARN] ⚠ Error processing question 4: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:23][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:25:28][WARN] ⚠ Error processing question 5: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:33][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:25:39][WARN] ⚠ Error processing question 6: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:44][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
-[2026-03-13 15:25:49][WARN] ⚠ Error processing question 7: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:49][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (4 items)
-[2026-03-13 15:25:55][WARN] ⚠ Error processing question 8: Message: element not interactable
-  (Session info: chrome=14
-[2026-03-13 15:25:56][WARN] Standard selectors failed, trying Form 2 checkbox detection...
+[2026-03-13 16:30:37][INFO] Options found using selector: div[role='radio'], div[role='checkbox'], .L_P69b (1 items)
