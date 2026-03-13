@@ -1,0 +1,34 @@
+name: Pulse Deploy
+on:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Render
+      run: |
+        # Log trigger time
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - GitHub Actions trigger sent" >> heartbeat.log
+        
+        # Trigger Render deploy hook
+        curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}" \
+          -H "Content-Type: application/json" \
+          -d '{"message":"Scheduled pulse deploy"}' \
+          --max-time 30 \
+          --retry 3
+        
+        echo "Deploy hook triggered at $(date)"
+    
+    - name: Update heartbeat log
+      run: |
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - Deploy completed" >> heartbeat.log
+    
+    - name: Upload heartbeat log
+      uses: actions/upload-artifact@v3
+      with:
+        name: heartbeat-log
+        path: heartbeat.log
+        retention-days: 30

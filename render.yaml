@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: survey-validator
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 120 main:app"
+    autoDeploy: false
+    healthCheckPath: /health
+    envVars:
+      - key: FORM_1_URL
+        sync: false
+      - key: FORM_2_URL
+        sync: false
+      - key: RENDER_DEPLOY_HOOK_URL
+        sync: false
