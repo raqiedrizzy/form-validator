@@ -494,3 +494,50 @@
 [2026-03-13 18:04:51][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
 [2026-03-13 18:04:51][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
 [2026-03-13 18:04:51][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
+[2026-03-13 18:05:10][INFO] Proxy verified: 125.26.4.219:8080
+[2026-03-13 18:05:13][INFO] Proxy verified: 134.209.29.120:3128
+[2026-03-13 18:05:13][INFO] Proxy verified: 128.199.202.122:8080
+[2026-03-13 18:05:22][INFO] ProxyManager: 3 clean proxies ready.
+[2026-03-13 18:05:53][INFO] Attempt #13 starting...
+[2026-03-13 18:05:53][INFO] Selected Form 1 (alternating from Form 2)
+[2026-03-13 18:05:53][INFO] Auto-refreshing proxies (pool size: 3, stale: False)
+[2026-03-13 18:05:53][INFO] ProxyManager: refreshing (workers=30, goal=50)...
+[2026-03-13 18:05:53][INFO] Using cached proxies (3 available)
+[2026-03-13 18:05:53][INFO] Selected eligible proxy: 125.26.4.219:8080 for Form 1
+[2026-03-13 18:05:53][INFO] Using proxy: 125.26.4.219:8080 for Form 1
+[2026-03-13 18:05:53][INFO] Stealth UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, lik...
+[2026-03-13 18:05:53][INFO] Stealth Proxy: 125.26.4.219:8080
+[2026-03-13 18:06:05][INFO] Stealth: CDP mask applied (webdriver=undefined).
+[2026-03-13 18:06:05][INFO] Navigating to Form 1: https://docs.google.com/forms/d/e/1FAIpQLSfNd-UEvuk2LyHMsTjflIo-wXjk6DVkD-wj1DPNc8rAsSMHBg/viewform
+[2026-03-13 18:06:29][INFO] Processing page 1...
+[2026-03-13 18:06:29][INFO] Current URL: https://docs.google.com/forms/d/e/1FAIpQLSfNd-UEvuk2LyHMsTjflIo-wXjk6DVkD-wj1DPNc8rAsSMHBg/viewform
+[2026-03-13 18:06:29][INFO] Page source length: 188340 characters
+[2026-03-13 18:07:45][WARN] No standard form elements found, trying fallback detection...
+[2026-03-13 18:08:05][INFO] Fallback found 4 elements with selector: span
+[2026-03-13 18:08:53][INFO] Attempt #7 starting...
+[2026-03-13 18:08:53][INFO] Selected Form 2 (alternating from Form 1)
+[2026-03-13 18:08:53][INFO] Auto-refreshing proxies (pool size: 1, stale: True)
+[2026-03-13 18:08:53][INFO] ProxyManager: refreshing (workers=30, goal=50)...
+[2026-03-13 18:08:53][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
+[2026-03-13 18:08:53][INFO] Proxy source: 40 candidates <- https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
+[2026-03-13 18:08:53][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
+[2026-03-13 18:08:53][INFO] Proxy source: 251 candidates <- https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list
+[2026-03-13 18:08:53][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
+[2026-03-13 18:09:06][INFO] Proxy verified: 159.203.61.169:3128
+[2026-03-13 18:09:25][INFO] ProxyManager: 1 clean proxies ready.
+[2026-03-13 18:09:25][INFO] Selected eligible proxy: 159.203.61.169:3128 for Form 2
+[2026-03-13 18:09:26][INFO] Using proxy: 159.203.61.169:3128 for Form 2
+[2026-03-13 18:09:26][INFO] Stealth UA: Mozilla/5.0 (iPhone; CPU iPhone OS 17_3 like Mac OS X) AppleWebKit/605.1...
+[2026-03-13 18:09:26][INFO] Stealth Proxy: 159.203.61.169:3128
+[2026-03-13 18:09:26][WARN] Standard selectors failed, trying Form 2 checkbox detection...
+[2026-03-13 18:09:36][WARN] No questions found on this page.
+[2026-03-13 18:09:36][INFO] Form process: 187.7s - FAILED
+[2026-03-13 18:09:36][WARN] ⚠ Form submission failed
+[2026-03-13 18:09:36][INFO] Cooldown: 37 min. Next run at 18:46
+[2026-03-13 18:09:40][INFO] Stealth: CDP mask applied (webdriver=undefined).
+[2026-03-13 18:09:40][INFO] Navigating to Form 2: https://docs.google.com/forms/d/e/1FAIpQLSd_a_DS8qoevwm-anVAn5Iv2J6uKDc6N5RjomS0h21Gd3Dmag/viewform?usp=dialog
+[2026-03-13 18:09:51][ERROR] ⚠ Critical error: Message: unknown error: net::ERR_CONNECTION_CLOSED
+  (Session info: chrome=145.0.7632.160)
+Stacktrace:
+Symbols not available. Dumping unresolved backt
+[2026-03-13 18:09:51][INFO] Cooldown: 30 min. Next run at 18:40
