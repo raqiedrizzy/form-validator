@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: "./build.sh"
-    startCommand: "gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 60 final_app:app"
+    startCommand: "gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 60 diagnostic_app:app"
     autoDeploy: false
     healthCheckPath: /health
     envVars:
