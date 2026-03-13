@@ -486,3 +486,11 @@
 [2026-03-13 18:04:19][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
 [2026-03-13 18:04:19][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
 [2026-03-13 18:04:19][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
+[2026-03-13 18:04:51][WARN] No verified proxies found — running direct.
+[2026-03-13 18:04:51][INFO] No eligible proxies available - refreshing proxy pool...
+[2026-03-13 18:04:51][INFO] ProxyManager: refreshing (workers=30, goal=50)...
+[2026-03-13 18:04:51][INFO] Proxy source: 251 candidates <- https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list
+[2026-03-13 18:04:51][INFO] Proxy source: 40 candidates <- https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
+[2026-03-13 18:04:51][INFO] Proxy source: 2989 candidates <- https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
+[2026-03-13 18:04:51][INFO] Proxy source: 60 candidates <- https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt
+[2026-03-13 18:04:51][INFO] Proxy source: 400 candidates <- https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
