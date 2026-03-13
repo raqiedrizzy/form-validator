@@ -115,6 +115,14 @@ class SurveyValidator:
         options.add_argument('--disable-javascript')
         options.add_argument(f'--user-agent={random.choice(USER_AGENTS)}')
         
+        # Additional Chrome options for Render environment
+        options.add_argument('--disable-software-rasterizer')
+        options.add_argument('--disable-background-timer-throttling')
+        options.add_argument('--disable-backgrounding-occluded-windows')
+        options.add_argument('--disable-renderer-backgrounding')
+        options.add_argument('--disable-features=TranslateUI')
+        options.add_argument('--disable-ipc-flooding-protection')
+        
         if proxy:
             options.add_argument(f'--proxy-server=http://{proxy}')
         
@@ -270,50 +278,70 @@ class SurveyValidator:
         """Execute 2:1 burst pattern (2 Form 1, 1 Form 2)"""
         logger.info("Starting 2:1 burst execution...")
         
-        # Fetch fresh proxies
-        if not self.proxy_manager.fetch_proxies():
-            logger.error("Failed to fetch proxies, aborting burst")
-            return False
+        # Set timeout for the entire burst (max 15 minutes)
+        import signal
         
-        burst_pattern = [
-            (self.form1_url, "Form 1"),
-            (self.form1_url, "Form 1"),
-            (self.form2_url, "Form 2")
-        ]
+        def timeout_handler(signum, frame):
+            logger.error("Burst execution timed out")
+            raise TimeoutError("Burst execution timed out")
         
-        successful_submissions = 0
+        signal.signal(signal.SIGALRM, timeout_handler)
+        signal.alarm(900)  # 15 minutes timeout
         
-        for i, (form_url, form_name) in enumerate(burst_pattern):
-            logger.info("Burst submission " + str(i+1) + "/3: " + form_name)
+        try:
+            # Fetch fresh proxies
+            if not self.proxy_manager.fetch_proxies():
+                logger.error("Failed to fetch proxies, aborting burst")
+                return False
             
-            # Get new proxy for each submission
-            proxy = self.proxy_manager.get_proxy()
-            logger.info("Using proxy: " + str(proxy))
+            burst_pattern = [
+                (self.form1_url, "Form 1"),
+                (self.form1_url, "Form 1"),
+                (self.form2_url, "Form 2")
+            ]
             
-            driver = None
-            try:
-                driver = self.create_driver(proxy)
-                if not driver:
-                    logger.error("Failed to create driver for " + form_name)
-                    continue
+            successful_submissions = 0
+            
+            for i, (form_url, form_name) in enumerate(burst_pattern):
+                logger.info("Burst submission " + str(i+1) + "/3: " + form_name)
                 
-                if self.process_form(driver, form_url, form_name):
-                    successful_submissions += 1
+                # Get new proxy for each submission
+                proxy = self.proxy_manager.get_proxy()
+                logger.info("Using proxy: " + str(proxy))
                 
-                # Randomized pacing between submissions
-                if i < len(burst_pattern) - 1:
-                    wait_time = random.uniform(300, 600)  # 5-10 minutes
-                    logger.info("Waiting " + str(wait_time/60) + " minutes before next submission...")
-                    time.sleep(wait_time)
+                driver = None
+                try:
+                    driver = self.create_driver(proxy)
+                    if not driver:
+                        logger.error("Failed to create driver for " + form_name)
+                        continue
                     
-            except Exception as e:
-                logger.error("Burst submission " + str(i+1) + " failed: " + str(e))
-            finally:
-                if driver:
-                    driver.quit()
-        
-        logger.info("Burst completed: " + str(successful_submissions) + "/3 submissions successful")
-        return successful_submissions >= 2  # Success if at least 2/3 submissions work
+                    if self.process_form(driver, form_url, form_name):
+                        successful_submissions += 1
+                    
+                    # Randomized pacing between submissions (reduced for testing)
+                    if i < len(burst_pattern) - 1:
+                        wait_time = random.uniform(60, 120)  # 1-2 minutes for testing
+                        logger.info("Waiting " + str(wait_time/60) + " minutes before next submission...")
+                        time.sleep(wait_time)
+                        
+                except Exception as e:
+                    logger.error("Burst submission " + str(i+1) + " failed: " + str(e))
+                finally:
+                    if driver:
+                        try:
+                            driver.quit()
+                        except:
+                            pass
+            
+            logger.info("Burst completed: " + str(successful_submissions) + "/3 submissions successful")
+            return successful_submissions >= 2  # Success if at least 2/3 submissions work
+            
+        except TimeoutError:
+            logger.error("Burst execution timed out")
+            return False
+        finally:
+            signal.alarm(0)  # Cancel timeout
 
 def main():
     """Main execution function"""

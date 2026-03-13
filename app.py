@@ -32,36 +32,77 @@ def trigger_burst():
     try:
         logger.info("Triggering Survey Validator burst execution...")
         
-        # Execute main.py as subprocess
-        result = subprocess.run(
+        # Execute main.py as subprocess with better error handling
+        import subprocess
+        import threading
+        import queue
+        
+        # Use a queue to capture output
+        output_queue = queue.Queue()
+        
+        def read_output(process, queue):
+            """Read process output and put in queue"""
+            try:
+                for line in iter(process.stdout.readline, ''):
+                    queue.put(('stdout', line.rstrip()))
+                for line in iter(process.stderr.readline, ''):
+                    queue.put(('stderr', line.rstrip()))
+                process.stdout.close()
+                process.stderr.close()
+            except:
+                pass
+        
+        # Start the subprocess
+        process = subprocess.Popen(
             [sys.executable, 'main.py'],
-            capture_output=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
-            timeout=3600  # 1 hour timeout
+            bufsize=1,
+            universal_newlines=True
         )
         
-        if result.returncode == 0:
-            logger.info("Survey Validator burst completed successfully")
+        # Start thread to read output
+        reader_thread = threading.Thread(target=read_output, args=(process, output_queue))
+        reader_thread.daemon = True
+        reader_thread.start()
+        
+        # Wait for process to complete with timeout
+        try:
+            return_code = process.wait(timeout=1800)  # 30 minutes timeout
+            
+            # Read remaining output
+            while not output_queue.empty():
+                stream, line = output_queue.get()
+                if stream == 'stdout':
+                    logger.info(line)
+                else:
+                    logger.error(line)
+            
+            if return_code == 0:
+                logger.info("Survey Validator burst completed successfully")
+                return jsonify({
+                    'status': 'success',
+                    'message': 'Burst execution completed',
+                    'timestamp': datetime.now().isoformat()
+                })
+            else:
+                logger.error("Survey Validator burst failed with code " + str(return_code))
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Burst execution failed',
+                    'timestamp': datetime.now().isoformat()
+                }), 500
+                
+        except subprocess.TimeoutExpired:
+            logger.error("Survey Validator burst timed out")
+            process.kill()
             return jsonify({
-                'status': 'success',
-                'message': 'Burst execution completed',
-                'timestamp': datetime.now().isoformat()
-            })
-        else:
-            logger.error("Survey Validator burst failed with code " + str(result.returncode))
-            return jsonify({
-                'status': 'error',
-                'message': 'Burst execution failed',
+                'status': 'timeout',
+                'message': 'Burst execution timed out',
                 'timestamp': datetime.now().isoformat()
             }), 500
             
-    except subprocess.TimeoutExpired:
-        logger.error("Survey Validator burst timed out")
-        return jsonify({
-            'status': 'timeout',
-            'message': 'Burst execution timed out',
-            'timestamp': datetime.now().isoformat()
-        }), 500
     except Exception as e:
         logger.error("Unexpected error: " + str(e))
         return jsonify({
